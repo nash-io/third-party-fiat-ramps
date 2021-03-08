@@ -26,11 +26,11 @@ So long as your dApp generates a QR code following this format, Nash fiat ramps 
 
 Example input fields:
 
-<img src="https://github.com/nash-io/third-party-fiat-ramps/blob/main/images/fiat-buy-fields.png" height=50>
+<img src="https://github.com/nash-io/third-party-fiat-ramps/blob/main/images/fiat-buy-fields.png" height=200>
 
 Generated QR code:
 
-<img src="https://github.com/nash-io/third-party-fiat-ramps/blob/main/images/fiat-buy-qr.png" height=50>
+<img src="https://github.com/nash-io/third-party-fiat-ramps/blob/main/images/fiat-buy-qr.png" height=150>
 
 
 ## Installation
