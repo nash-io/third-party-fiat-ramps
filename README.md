@@ -24,6 +24,15 @@ Supported values for `asset` are currently: `"eth"` and `"usdc"`, with more to c
 
 So long as your dApp generates a QR code following this format, Nash fiat ramps can be integrated into a dApp through a variety of interfaces and user flows. In this example we illustrate a flow where the user first selects an asset and inputs an amount. Then when the user clicks "Buy", a QR code is generated and the user completes the flow with the Nash mobile app. 
 
+Example input fields:
+
+![Nash example input fields](https://github.com/nash-io/third-party-fiat-ramps/blob/main/images/fiat-buy-fields.png)
+
+Generated QR code:
+
+![Generated QR code](https://github.com/nash-io/third-party-fiat-ramps/blob/main/images/fiat-buy-qr.png)
+
+
 ## Installation
 
 - npm install
