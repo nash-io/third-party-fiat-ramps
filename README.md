@@ -16,6 +16,8 @@ const encodeRampDataQR = (app, account, asset, amount) => {
 }
 ```
 
+A very simple working example lives [here](https://github.com/nash-io/third-party-fiat-ramps/blob/main/src/App.js). Note that this app is only supported by Nash test code at this time and is not yet live on production.
+
 ## Data types
 
 Supported values for `asset` are currently: `"eth"` and `"usdc"`, with more to come soon. For `address` we require a standard Ethereum address with a `0x` prefix. The value specified by `amount` is a decimal number that will be string encoded.
