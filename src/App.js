@@ -4,9 +4,11 @@ import QRCode from 'qrcode.react';
 import { useWallet } from 'use-wallet'
 
 // Communicate user address, asset and amount by simple JSON encoding
-// which is transmitted by a QR code to the Nash mobile app
-const encodeRampDataQR = (account, asset, amount) => {
+// which is transmitted by a QR code to the Nash mobile app. An `app`
+// argument serves as an identifier for the connecting dApp
+const encodeRampDataQR = (app, account, asset, amount) => {
     return JSON.stringify({
+        app,
         account,
         asset,
         amount
@@ -15,7 +17,7 @@ const encodeRampDataQR = (account, asset, amount) => {
 
 // Generate a QR code in the web interface encoding fiat buy information
 const NashRampQRCode = ({account, asset, amount}) => {
-    let encodedValues = encodeRampDataQR(account, asset, amount);
+    let encodedValues = encodeRampDataQR("example-app", account, asset, amount);
     console.log(encodedValues);
     return <QRCode value={encodedValues} />
 }
