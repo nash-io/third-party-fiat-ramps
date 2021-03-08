@@ -1,8 +1,6 @@
-# Nash third-party fiat ramps integration code
+# Nash third-party fiat ramps integration example
 
-This repo provides a toy dApp integration with Nash's third-party fiat ramps. These ramps allow users to purchase cryptocurrency on any supported dApp. The integration logic is extremely simple: by filling in two form fields, a QR code
-is generated that, when scanned by the Nash mobile app, allows Nash to send crypto to the connected dApp upon purchase. KYC and bank information is handled completely
-by the Nash mobile app, along with a variety of payment methods.
+This repo provides a toy dApp integration with Nash's third-party fiat ramps. These ramps allow users to purchase cryptocurrency on any supported dApp. The integration logic is based upon a QR code that, when scanned by the Nash mobile app, allows Nash to send crypto to the connected dApp upon purchase. KYC and bank information is handled completely by Nash, along with a variety of payment methods.
 
 Concretely, the data transmitted by the generated QR code corresponds to a user
 `address`, an `asset` type (e.g., ETH or USDC), an `amount`, and finally an idenfifier (`app`) for the dApp of origin (non-verifiable by Nash, but for record keeping; ultimately the user is responsible for where they are requesting funds be sent). In this repo you can find the code:
@@ -20,7 +18,7 @@ const encodeRampDataQR = (app, account, asset, amount) => {
 
 ## Data types
 
-Supported values for `asset` are currently: "eth" and "usdc", with more to come soon. For `address` we require a standard Ethereum address with a "0x" prefix. Amount is a decimal number that will be string encoded.
+Supported values for `asset` are currently: `"eth"` and `"usdc"`, with more to come soon. For `address` we require a standard Ethereum address with a `0x` prefix. The value specified by `amount` is a decimal number that will be string encoded.
 
 ## User flow
 
